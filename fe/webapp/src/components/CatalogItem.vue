@@ -8,20 +8,20 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md items-center">
+    <div class="m-2 p-6 w-96 h-52 max-w-lg mx-auto bg-white rounded-xl shadow-md items-center">
         <p class="font-semibold text-lg">{{ title }}</p>
         <p class="text-xs">img</p>
         <p class="text-sm">{{  description }}</p>
-        <div class="flex content-between">
-            <div v-if="availability === true" class="p-1 max-w-sm mx-auto bg-green-400 rounded-md">
-                <p class="text-base">Available</p>
+        <div class="flex justify-between items-center">
+            <div v-if="availability === true" class="p-1.5 max-w-sm bg-green-400 rounded-full">
+                <p class="text-xs">Available</p>
             </div>
-            <div v-else class="p-1 max-w-sm mx-auto bg-red-400 rounded-md">
-                <p class="text-base">Taken</p>
+            <div v-else class="p-1.5 max-w-sm bg-red-400 rounded-full">
+                <p class="text-xs">Taken</p>
             </div>
-            <p class="text-lg">${{  price }}</p>
+            <p class="text-lg">${{ price }}/day</p>
         </div>
-        <button v-if="availability===true" class="p-1 m-2 bg-blue-500 rounded-lg">Register interest</button>
+        <button v-if="availability===true" class="p-1 my-2 bg-cyan-400 rounded-lg">Register interest</button>
     </div>
 </template>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import CatalogItem from './components/CatalogItem.vue';
+import NavBar from './components/global/NavBar.vue';
 const data = [
   {
     title: "Lamborghini huracan",
@@ -18,11 +19,10 @@ const data = [
 </script>
 
 <template>
-  <header class="flex">
+  <NavBar/>
+  <main class="flex-col justify-between">
     <CatalogItem v-for="vehicle in data" v-bind="vehicle" />
-  </header>
-
-  <RouterView />
+  </main>
 </template>
 
 <style scoped>
